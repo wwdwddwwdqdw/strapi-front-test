@@ -22,10 +22,11 @@ export const query = graphql`
 
 const Work = ({ data }) => {
   const work = data.strapiWork
-  console.log(work);
+  console.log(work)
   return (
     <>
       <p>{work.title}</p>
+      <ReactMarkdown source={work.content} />
     </>
     // <Layout>
     //   <div>
